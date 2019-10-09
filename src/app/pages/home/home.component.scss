@@ -1,0 +1,17 @@
+.informations{
+  padding: 15px;
+  background: #1A237E;
+  color:#fff;
+  border-radius: 3px;
+  p{
+    margin: 0;
+  }
+  pre{
+    padding: 5px 0px;
+    padding-left: 15px;
+    border-left:1px solid #E65100;
+    display: block;
+    background: rgba(0, 0, 0, .2);
+    border-radius: 3px;
+  }
+}

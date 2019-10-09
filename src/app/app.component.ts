@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'cfm-formation-jour-deux';
+
+  // Le composant principal de notre application
+  // C'est le point d'entrée.
+  // Le premier composant à être initialisé
+
 }

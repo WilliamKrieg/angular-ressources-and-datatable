@@ -1,0 +1,13 @@
+.left{
+  width: 60%;
+  float: left;
+}
+.right{
+  width: calc(40% - 60px);
+  float: right;
+  padding: 30px;
+}
+
+.clearfix{
+  clear: both;
+}

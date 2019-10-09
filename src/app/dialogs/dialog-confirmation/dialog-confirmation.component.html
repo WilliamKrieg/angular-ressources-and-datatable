@@ -1,0 +1,9 @@
+<p>Êtes-vous sur de vouloir supprimer la formation : </p>
+<p><strong>
+    ID {{data?.id}} - {{ data?.title | uppercase  }}
+</strong></p>
+
+<mat-dialog-actions>
+    <button mat-button [mat-dialog-close]="false">Annuler</button>
+    <button mat-raised-button color="primary" [mat-dialog-close]="true">Confirmer</button>
+</mat-dialog-actions>

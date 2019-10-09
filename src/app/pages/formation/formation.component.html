@@ -1,0 +1,30 @@
+<div class="left">
+  <h1>{{ (formation.id) ? 'Editer la formation' : 'Ajouter une formation' }}</h1>
+  <form #f="ngForm">
+      <mat-form-field appearance="outline" style="width:50%;">
+          <mat-label>Nom de la formation :</mat-label>
+          <input matInput name="title" required
+          [(ngModel)]="formation.title" (ngModelChange)="autoSave(f)">
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="outline" style="width:100%;">
+          <mat-label>Description :</mat-label>
+          <textarea matInput name="description" rows="10"
+          required [(ngModel)]="formation.description"  (ngModelChange)="autoSave(f)"></textarea>
+      </mat-form-field>
+      <br>
+      <button [disabled]="!f.form.valid" (click)="saveFinal(f)" mat-raised-button color="primary">Sauvegarder</button>
+      <button style="margin-left:5px;" mat-stroked-button (click)="previewMode = !previewMode">
+        {{ previewMode ? 'Fermer la prévisualisation' : 'Prévisualiser la formation' }}
+      </button>
+    </form>
+</div>
+<div class="right">
+    <div *ngIf="previewMode" style="margin-top: 30px;">
+        <app-card-formation [passFormation]="formation" (clickShare)="shareFormation($event)"></app-card-formation>
+    </div>
+</div>
+
+
+<div class="clearfix"></div>
+
